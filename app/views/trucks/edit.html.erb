@@ -1,0 +1,8 @@
+
+<%= form_for :truck, url: update_truck_path do |f|%>
+  <%= f.collection_select :id, @alltrucks,:id,:name, include_blank: true %><br>
+  <%= f.text_field :latitude, placeholder: "Latitude" %><br>
+  <%= f.text_field :longitude, placeholder: "Longitude" %><br>
+  <%= f.submit "Update Truck" %>
+<% end %>
+
